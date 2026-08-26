@@ -6,6 +6,7 @@ from transformers import (
     AutoImageProcessor,
     AutoProcessor,
     AutoTokenizer,
+    AutoVideoProcessor,
     Qwen2Tokenizer,
     Qwen2TokenizerFast,
 )
@@ -42,6 +43,7 @@ def register_processors(config_class):
         exist_ok=True,
     )
     AutoImageProcessor.register(O2ConfigProxy, O2ImageProcessor, exist_ok=True)
+    AutoVideoProcessor.register(O2ConfigProxy, O2VideoProcessor, exist_ok=True)
     AutoProcessor.register(config_class, O2Processor, exist_ok=True)
 
 
