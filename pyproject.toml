@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "o2-transformers"
+version = "0.1.0"
+description = "O2 dual-expert MoE model support for transformers"
+requires-python = ">=3.10"
+dependencies = ["transformers>=5.10"]
+
+[tool.setuptools.packages.find]
+include = ["o2_model*"]
